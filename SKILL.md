@@ -1,9 +1,9 @@
 ---
-name: design-discovery
+name: pre-design
 description: Pre-injection discovery protocol applying Open Design's 4 mechanisms (Discovery Form, Direction Picker, Anti-AI-slop Guardrails, 5-Dim Self-Review) BEFORE any visual design work. MUST auto-trigger for ANY visual deliverable request — HTML pages, landing pages, posters, PPT/PPTX decks, slides, social cards, 카드뉴스, 썸네일, 인포그래픽, dashboards, UI components, Instagram cards, portfolio pages, menu designs, lecture slides — or anything described as 디자인해줘, design, make it pretty, 예쁘게, 감각있게, 스타일, make/create/build a [visual thing]. Runs FIRST, then hands off to brand skills (parcyun-studio, MDBF) or proceeds with the selected direction. Does NOT skip — short requests get a compressed 30-second form. Cost of one wrong-direction round is one chat turn; cost of skipping discovery is a finished artifact that has to be remade.
 ---
 
-# Design Discovery Protocol
+# Pre-Design Protocol
 
 디자인 작업에서 가장 비싼 실수는 "잘못된 방향으로 끝까지 만든 뒤 다시 시작"이다. 건축에서 도면 없이 콘크리트를 붓지 않듯, 픽셀 그리기 전에 방향을 확정한다. **30초의 질문이 30분의 수정을 막는다.**
 
@@ -93,10 +93,10 @@ AI가 무의식적으로 만드는 흔한 함정. 작성 중 다음 패턴이 �
 
 순서:
 ```
-1. design-discovery 단계 1·2 → 방향 확정
+1. pre-design 단계 1·2 → 방향 확정
 2. 브랜드 스킬 또는 단계 2 토큰 → 실제 작업
-3. design-discovery 단계 3 (작성 중 자가검열)
-4. design-discovery 단계 4 (출력 직전 5차원 채점) → 완료
+3. pre-design 단계 3 (작성 중 자가검열)
+4. pre-design 단계 4 (출력 직전 5차원 채점) → 완료
 ```
 
 ---

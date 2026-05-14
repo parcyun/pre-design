@@ -1,4 +1,4 @@
-# design-discovery
+# pre-design
 
 Claude Skill — 시각 디자인 작업 전 **방향을 먼저 확정**하는 4단계 프로토콜.
 
@@ -51,13 +51,13 @@ AI 디자인 작업에서 가장 비싼 실수는 "잘못된 방향으로 끝까
 Claude Desktop / Claude.ai의 Skills 폴더에 `SKILL.md`를 배치:
 
 ```
-~/.claude/skills/design-discovery/SKILL.md
+~/.claude/skills/pre-design/SKILL.md
 ```
 
 또는 Anthropic Skills 시스템의 사용자 스킬 경로에 클론:
 
 ```bash
-git clone https://github.com/<your-username>/design-discovery.git
+git clone https://github.com/<your-username>/pre-design.git
 ```
 
 ---
