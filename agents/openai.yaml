@@ -1,0 +1,8 @@
+interface:
+  display_name: "Pre-Design"
+  short_description: "프로젝트와 오브젝트의 디자인 방향 사전 설계"
+  brand_color: "#FFB11A"
+  default_prompt: "Use $pre-design to establish the scope, direction, handoff, and practical verification criteria before starting this design work."
+
+policy:
+  allow_implicit_invocation: true

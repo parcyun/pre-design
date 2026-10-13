@@ -1,151 +1,179 @@
 ---
 name: pre-design
-description: Pre-injection discovery protocol applying Open Design's 4 mechanisms (Discovery Form, Direction Picker, Anti-AI-slop Guardrails, 5-Dim Self-Review) BEFORE any visual design work. MUST auto-trigger for ANY visual deliverable request — HTML pages, landing pages, posters, PPT/PPTX decks, slides, social cards, 카드뉴스, 썸네일, 인포그래픽, dashboards, UI components, Instagram cards, portfolio pages, menu designs, lecture slides — or anything described as 디자인해줘, design, make it pretty, 예쁘게, 감각있게, 스타일, make/create/build a [visual thing]. Runs FIRST, then hands off to brand skills (parcyun-studio, MDBF) or proceeds with the selected direction. Does NOT skip — short requests get a compressed 30-second form. Cost of one wrong-direction round is one chat turn; cost of skipping discovery is a finished artifact that has to be remade.
+description: Prepare design direction before starting a visual project, beginning a new design phase, resetting an existing tone, or creating a major object such as a page, component, slide, card, chart, or visual system. Establish the minimum brief, constraints, references, tokens, and practical verification criteria before implementation. Skip only tiny mechanical edits whose direction is already fixed.
 ---
 
-# Pre-Design Protocol
+# Pre-Design
 
-디자인 작업에서 가장 비싼 실수는 "잘못된 방향으로 끝까지 만든 뒤 다시 시작"이다. 건축에서 도면 없이 콘크리트를 붓지 않듯, 픽셀 그리기 전에 방향을 확정한다. **30초의 질문이 30분의 수정을 막는다.**
+Resolve high-rework decisions before implementation. Use the smallest amount of discovery that prevents the work from starting in the wrong direction.
 
-이 스킬은 4단계 프로토콜이다. 디자인 작업 시작 시 1→2→3→4 순서로 실행한다. 목표는 질문을 많이 하는 것이 아니라, 재작업 비용이 큰 결정만 먼저 잠그는 것이다.
+## Codex operating rules
 
-### 운영 원칙
+1. Inspect the request, conversation, references, relevant files, existing styles, assets, and project records before asking anything.
+2. Never ask the user to repeat information already available.
+3. Choose one path:
+   - **Proceed:** intent and constraints are clear.
+   - **Assume:** a missing choice is reversible and low-cost; state one concise assumption and proceed.
+   - **Ask:** a missing choice would materially change structure, brand, content, accessibility, or scope; ask one concise question.
+4. Do not turn a short task into a questionnaire. Ask only what changes the result.
+5. Record the chosen direction compactly, then hand off to the applicable brand, format, or implementation skill.
 
-- 이미 제공된 정보는 다시 묻지 않는다.
-- 답이 없으면 안전하고 되돌릴 수 있는 가정을 한 줄로 기록하고 진행한다.
-- 인증·개인정보·결제·배포·삭제처럼 영향이 큰 결정은 추측하지 않고 멈춘다.
-- 브랜드가 확정되면 브랜드 스킬을 우선한다. 이 스킬은 브랜드를 대체하지 않고 방향을 연결한다.
-- 코드와 시안을 만들기 전에 방향, 핵심 행동, 검증 기준을 짧게 고정한다.
+## When to run
 
----
+Run this skill for:
 
-## 단계 1 · Discovery 폼 (Turn 1, 코드 작성 금지)
+- a new project or product with visual decisions;
+- the first design pass for an existing project;
+- a redesign, rebrand, visual refresh, or new tone;
+- a new page type, design system, template, or campaign;
+- a major object such as a hero, navigation, dashboard module, card family, chart, slide system, poster, thumbnail, or document cover;
+- work described as “design it,” “make it polished,” “set the tone,” “make it on-brand,” or similar.
 
-질문 없이 그리지 않는다. 다음 6개 항목을 한 번에 묻는다. 이미 컨텍스트에 있는 항목은 생략하고, 빠진 부분만 짧게 물어본다.
+For an object inside an established system, preserve the parent system and define only the object-specific role, content, states, and constraints. Do not reopen settled project-level decisions.
 
-```
-1. 매체     · 무엇? (랜딩페이지 / 포스터 / 슬라이드 / 카드 / 문서)
-2. 대상     · 누가 보는가? (학생 / 동료 / 클라이언트 / 대중)
-3. 톤       · 어떤 인상? (전문 / 친근 / 럭셔리 / 발랄 / 미니멀)
-4. 브랜드   · parcyun studio / MDBF / 외부 / 새 컨셉
-5. 규모     · 페이지·슬라이드 수, 크기
-6. 제약     · 마감일, 필수 색상·폰트·요소
-```
+Skip full discovery for tiny mechanical edits such as a known color replacement, typo correction, or fixed-size export. Preserve the current direction and verify the requested change.
 
-답이 짧아도 OK. 라디오 버튼 속도로 받는다. 사용자가 이미 충분히 설명한 경우(예: "내 studio 스타일로 v2 수정") 1-2단계는 압축 가능하지만 **3-4단계는 항상 실행**.
+## Select the scope
 
-### Discovery 결과 형식
+Classify the work before planning it.
 
-질문을 마친 뒤 다음 항목을 내부 작업 기준으로 고정한다.
+| Scope | What must be fixed |
+| --- | --- |
+| Project kickoff | audience, problem, core action, content model, brand relationship, platforms, constraints |
+| Design kickoff | visual stance, hierarchy, layout logic, type, color, imagery, motion, responsive behavior |
+| Tone reset | what remains, what changes, target impression, migration boundary, before/after success signal |
+| Object pre-work | object role, parent context, content, variants, states, dimensions, interactions, edge cases |
+
+Use the narrowest applicable scope. Escalate from object to project scope only when the requested object exposes a genuine system-level conflict.
+
+## Build the minimum viable brief
+
+Resolve these fields from available evidence:
 
 ```text
-매체: ... / 대상: ... / 톤: ... / 브랜드: ... / 규모: ... / 제약: ...
-핵심 행동: ...
-완료 기준: ...
+Scope: project / design / tone reset / object
+Deliverable: format, platform, dimensions
+Audience and context: who encounters it, where, and under what conditions
+Job: what the viewer must understand, feel, or do
+Content: required copy, data, assets, and priority
+Existing system: reusable styles, components, patterns, and protected decisions
+Direction: brand or one coherent visual stance
+Constraints: technical, accessibility, legal, schedule, and content limits
+Done when: observable checks that prove the result works
 ```
 
-`핵심 행동`과 `완료 기준`이 없으면 화면을 예쁘게 만드는 것과 문제를 해결하는 것을 구분할 수 없다.
+For small or well-specified work, compress the brief to:
 
----
-
-## 단계 2 · 방향 선택 (브랜드 미지정 시에만)
-
-단계 1에서 브랜드가 확정되면(`parcyun studio`, `MDBF` 등) 이 단계 스킵하고 해당 브랜드 스킬로 바로 인계.
-
-브랜드가 없거나 "새 컨셉"이면 5개 학파 중 사용자가 하나 선택:
-
-| 방향 | 무드 | 적합한 경우 |
-|---|---|---|
-| **Editorial** | 매거진풍, 따뜻한 잉크 톤 | 큐레이션, 갤러리, 에세이 |
-| **Modern Minimal** | Linear·Vercel풍, 차가운 미니멀 | SaaS, 대시보드, 문서 |
-| **Tech Utility** | 모노스페이스, 정보 밀도 | 개발자 도구, 데이터 표시 |
-| **Brutalist** | 거대 타입, 그림자 없음, 강한 색 | 임팩트, 어그로, 실험 |
-| **Soft Warm** | 낮은 대비, 복숭아 뉴트럴 | 교육, 헬스케어, 라이프스타일 |
-
-선택 후 팔레트 + 폰트 스택을 **결정론적으로 고정**. AI 자유 재량 금지.
-
-방향을 선택하면 배경·표면·본문·보조 텍스트·보더·강조색, 디스플레이·본문 서체, 기본 간격 단위, Primary 행동 1개도 함께 고정한다. 작업 중 임의로 토큰을 늘리지 않는다.
-
----
-
-## 단계 3 · Anti-AI-slop 금지 목록 (작성 중 자가검열)
-
-AI가 무의식적으로 만드는 흔한 함정. 작성 중 다음 패턴이 보이면 멈추고 다시.
-
-**금지 패턴:**
-- 보라색 그라디언트 (특히 `#667eea → #764ba2` 류 디폴트 톤)
-- 일반 이모지를 UI 아이콘 대용으로 (🚀 ✨ 💎)
-- 왼쪽 컬러 테두리가 있는 둥근 카드 (블로그·포트폴리오 클리셰)
-- Display 폰트로서의 Inter (본문은 OK, 큰 헤드라인은 다른 폰트)
-- 손으로 그린 듯한 SVG 인물 일러스트
-- 허구의 지표 ("10배 빠릅니다", "98% 만족도")
-- 의미 없는 글래스모피즘 남용
-
-**대체:**
-- 그라디언트 대신 단색 + 미세 텍스처 / 노이즈
-- 이모지 대신 라인 아이콘 (Lucide, Heroicons, Phosphor)
-- 허구 숫자 대신 `—` 또는 회색 placeholder 블록
-- Display용 폰트: Space Grotesk, Cabinet Grotesk, Clash Display 등
-
-실제 데이터가 없는 숫자·차트는 만들지 않는다. 아이콘에는 접근 가능한 이름을 제공하고, 애니메이션은 `prefers-reduced-motion`에서 안전하게 정지하거나 축소한다.
-
----
-
-## 단계 4 · 5차원 자기 검토 (출력 직전 필수)
-
-최종 파일·아티팩트 출력 직전, 다음 5개 축에서 1-5점으로 자가 채점. **평균 3.0 미만이면 수정 후 재채점.**
-
-| 차원 | 평가 기준 |
-|---|---|
-| **철학** Philosophy | 디자인 결정에 "왜"가 있는가? 일관된 미적 입장이 있는가? |
-| **계층** Hierarchy | 시각적 위계 명확? 가장 중요한 것이 가장 눈에 띄는가? |
-| **실행** Detail | 간격·정렬·타이포 디테일 정확? |
-| **기능** Function | 사용자가 다음 행동을 취할 수 있는가? CTA 명확? |
-| **절제** Restraint | 불필요한 요소 없는가? 과잉 장식 제거됐나? |
-
-채점은 내부적으로 수행. **통과(평균 3.0 이상) 시 조용히 출력 — 채점 결과를 사용자에게 노출하지 않는다.** 미달 시에만 "한 가지 다듬을 곳이 있어 한 번 수정했어요" 정도로 짧게 알리고 출력. 인지 부하를 줄이는 게 채점의 가시성보다 우선.
-
-점수보다 낮은 항목의 수정 행동이 중요하다. 평균이 3.0 미만이면 가장 낮은 축부터 한 번 수정하고 재검토한다. 평균이 3.0 이상이어도 기능 또는 접근성이 2점 이하이면 출력하지 않는다.
-
----
-
-## 다른 스킬과의 관계
-
-이 스킬은 **사전 단계**다. 단계 2에서 브랜드가 결정되면 다음 스킬로 자동 인계:
-
-- `parcyun studio` 선택 → `parcyun-studio` 스킬 (#FFB11A, Montserrat Light + Pretendard, Toss-Liquid)
-- `MDBF` 선택 → MDBF 컨텍스트 (#3364D9)
-- 그 외 방향 선택 → 단계 2에서 확정된 토큰으로 진행
-
-순서:
-```
-1. pre-design 단계 1·2 → 방향 확정
-2. 브랜드 스킬 또는 단계 2 토큰 → 실제 작업
-3. pre-design 단계 3 (작성 중 자가검열)
-4. pre-design 단계 4 (출력 직전 5차원 채점) → 완료
+```text
+[scope/deliverable] for [audience] to [job], preserving [existing system], using [direction], done when [checks].
 ```
 
----
+## Gather evidence before choosing a direction
 
-## 컨텍스트별 발동 강도
+Use evidence in this order:
 
-| 상황 | 발동 강도 |
-|---|---|
-| 새 디자인 요청 | 전체 1→2→3→4 실행 |
-| 기존 디자인 수정 (v2, v3) | 1·2 압축 (변경점만 확인), 3·4는 실행 |
-| 매우 짧은 요청 ("이거 좀 예쁘게") | 1번을 3개 항목으로 압축 (매체·톤·제약), 2는 스킵 가능, 3·4 실행 |
-| 사용자가 "그냥 만들어줘" 강조 | 1·2 스킵하되 가정한 방향을 한 줄로 명시 후 진행, 3·4는 항상 실행 |
+1. current project files, brand rules, approved assets, and existing product behavior;
+2. user-supplied references and exact copy;
+3. comparable products or visual references, when needed;
+4. conservative defaults only when evidence is absent.
 
-3·4단계는 **절대 스킵하지 않는다.** 이게 AI-slop과 디자이너 결과물을 가르는 선이다.
+Separate references into:
 
-## 작업 인계 및 완료 조건
+- **keep:** decisions that already work and must remain;
+- **change:** the specific perception or behavior to improve;
+- **avoid:** patterns that conflict with the product or feel generic;
+- **unknown:** items that need a safe assumption or one question.
 
-방향 확정 후 브랜드 스킬 또는 선택한 토큰으로 구현을 시작한다. 구현이 끝나면 다음을 확인한다.
+Do not copy a reference wholesale. Extract useful properties such as density, rhythm, contrast, type character, image treatment, and interaction behavior.
 
-1. 방향·핵심 행동·완료 기준이 실제 결과물에 반영되었는가?
-2. 실제 출력 크기에서 계층·간격·줄바꿈이 유지되는가?
-3. 필요한 상태와 키보드 접근성이 있는가?
-4. 장식용 데이터, 무의미한 블러, 반복 카드, 금지 패턴이 남아 있지 않은가?
-5. 검증하지 못한 항목은 `미검증: 이유 / 다음 확인 방법`으로 남겼는가?
+## Lock direction at the right level
 
-완료 보고는 `구현됨`, `검증됨`, `미검증`을 구분한다.
+If a brand exists, load its skill and current tokens. Brand rules outrank generic preferences.
+
+If no brand exists, choose one coherent stance rather than mixing styles:
+
+| Direction | Character | Typical fit |
+| --- | --- | --- |
+| Editorial | typographic, warm, image-led | curation, essays, galleries |
+| Modern Minimal | precise, quiet, high-contrast | SaaS, dashboards, documents |
+| Tech Utility | dense, functional, system-like | developer and data tools |
+| Brutalist | raw, oversized, confrontational | campaigns and experiments |
+| Soft Warm | gentle, welcoming, low-friction | education, health, lifestyle |
+
+Lock only the decisions needed for the selected scope:
+
+- hierarchy and primary action;
+- background, surface, text, muted text, border, accent;
+- display and body type roles;
+- spacing density, grid, radius, and shadow policy;
+- imagery/icon/illustration treatment;
+- motion character and reduced-motion behavior;
+- object states and variants when designing a component.
+
+Do not create extra palettes, font families, variants, or abstractions without a demonstrated need.
+
+## Handoff contract
+
+Before implementation, leave a compact handoff another Codex instance can act on:
+
+```text
+Intent:
+Preserve:
+Change:
+Direction:
+Required content/assets:
+Primary action:
+States/variants:
+Constraints:
+Verification:
+Assumptions or unresolved items:
+```
+
+Keep it short enough to guide implementation. For an existing project, use its current handoff or progress record rather than creating a parallel tracker.
+
+## Implementation guardrails
+
+Reject generated-looking defaults unless the brief specifically supports them:
+
+- decorative purple gradients, cyan glow, gradient headings;
+- emoji used as interface icons;
+- repeated identical icon-card grids or cards nested inside cards;
+- invented metrics, decorative charts, or fake testimonials;
+- glass, blur, noise, or animation without a functional role;
+- Inter or monospace everywhere as a substitute for typography decisions;
+- unrelated placeholder illustration;
+- every action styled as primary.
+
+Prefer real content, restrained tokens, deliberate hierarchy, consistent icon families, and complete interaction states. For web UI, run `authentic-web-design` after this skill. For branded work, apply the brand skill before generic visual preferences.
+
+## Practical verification
+
+Verify the artifact at the level the user will experience it. Source inspection alone is not enough for visual completion.
+
+### Universal gates
+
+| Gate | Pass condition | How to check |
+| --- | --- | --- |
+| Intent | audience, purpose, and primary action are evident | five-second read or first-screen inspection |
+| Hierarchy | importance is visible without explanation | blur/squint test and reading order |
+| Coherence | type, color, spacing, imagery, and motion express one direction | compare representative screens/objects side by side |
+| Content | real copy/data/assets fit without accidental overflow or fabrication | test shortest, longest, empty, and error content where relevant |
+| Function | interaction, navigation, states, and accessibility work | keyboard, focus, contrast, reduced motion, target-size checks |
+| Context | output works in its actual size, device, or medium | responsive browser, slide render, print/export, or target preview |
+| Restraint | every prominent element has a purpose | remove-one-element test |
+
+### Scope-specific gates
+
+- **Project kickoff:** one representative end-to-end path is coherent; major pages or objects share the same system.
+- **Design kickoff:** representative desktop and mobile/output-size views preserve hierarchy and rhythm.
+- **Tone reset:** before/after comparison clearly shows the intended change while protected behavior and content remain intact.
+- **Object pre-work:** default, hover/focus/active/disabled, loading/empty/error, and content extremes are covered when applicable.
+
+If a gate fails, revise the weakest cause and verify again. Do not expose internal scoring. Report evidence using:
+
+- `implemented locally`
+- `validated by render, build, test, or static check`
+- `verified in real UI or target output`
+- `not verified: reason / next exact check`
+
+The goal is fewer wrong-direction iterations and a result that can be judged in the real context of use.
